@@ -1,8 +1,150 @@
 <html>
 <head>
-<title>Hello Github Page</title>
+<style>
+@charset "UTF-8";
+* {
+  position: relative;
+  font-family: 微軟正黑體;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle farthest-corner at center, #19283D, #1D678F);
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 900;
+  color: #f9f9f9;
+}
+
+.lily {
+  width: 80%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+
+.quiz {
+  background: #f9f9f9;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 5px 5px 5px 5px;
+  transition-duration: 1s;
+}
+.quiz:hover {
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.quiz:hover h3 {
+  background: #06a773;
+}
+
+h3 {
+  color: #f9f9f9;
+  padding: 15px;
+  text-align: center;
+  background: #117957;
+  transition-duration: 1s;
+  border-radius: 5px 5px 0px 0px;
+}
+
+p {
+  height: 0px;
+  overflow: hidden;
+  transition-duration: 1s;
+  padding: 0px 15px;
+}
+
+.pic {
+  display: none;
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+#switch:checked + .quiz p {
+  height: inherit;
+  padding: 0px 15px 15px 15px;
+}
+#switch:checked + .quiz h3 {
+  background: #00439e;
+}
+#switch:checked + .quiz .pic {
+  display: block;
+}
+
+#switch {
+  display: none;
+}
+  </style>
 </head>
 <body>
-<h1>Hello World!</h1>
+
+<div class="lily">
+  <div class="title">
+    <h1>ＷeHelp申請書</h1>
+  </div>
+  <label>
+    <input id="switch" type="checkbox"/>
+    <div class="quiz">
+      <h3>個人簡介</h3>
+      <p>我是黃俐文Lily，今年30歲，畢業於多媒體設計系，視覺設計經驗約七年，目前在第三方認證公司及其經營電商擔任設計一職。<br><br>除一般視覺設計外，常因應專案需求撰寫電子報、商品導購頁，在這過程中發現程式能立即獲得回饋，也大大提升自我成就感。考量到目前職業的天花板，以及自由工作型態的可能性，開啟了自學之路，朝轉職前端工程師邁進。<br><br>自學路上發現了澎澎老師的課程，覺得很適合遇上撞牆期的自己，因而報名參加。</p>
+    </div>
+  </label>
+  <label>
+    <input id="switch" type="checkbox"/>
+    <div class="quiz">
+      <h3>為了成為軟體工程師，曾做過什麼努力？</h3>
+      <p>除了彭彭老師的youtube課程外，還上了吳哲宇老師在Hahow上開的「動畫互動網頁程式入門 (HTML/CSS/JS)」，目前進度為50%左右，並且隨著課程完成了每項作業。<br><br>以及加入了前端工程師的相關社群，在裡面吸取他人經驗，或是職場就業環境等等，增添了自學之外跟其他有相同目標的同學的良好交流！</p>
+      <div class="pic"><img src="https://upload.cc/i1/2022/09/11/zWPjub.png" alt="學習過程"/></div>
+    </div>
+  </label>
+  <label>
+    <input id="switch" type="checkbox"/>
+    <div class="quiz">
+      <h3>如果參與這個計畫，會怎麼安排學習時間？</h3>
+      <p>目前還是在職中，想先透過第一階段測試自己適不適合這樣的學習模式。<br><br>時間的安排分為平日及假日，平日扣除上班及休息吃飯的時間，每天花4個小時學習，而通勤及午休空檔可用來看技術相關文章，假日則是每日10-12小時之間。每週依學習狀況調整時間。<br><br>學習步調如預期並且通過第一階段的作業，依照相同的時間規劃進入第二階段的訓練。順利接到第三階段會向公司提出離職，預計在一月底離職後，全心投入第三階段的個人專案中。<br><br>＊因為手頭上還負責公司的專案，所以有這樣的考量，希望能做到盡善盡美。</p>
+    </div>
+  </label>
+  <label>
+    <input id="switch" type="checkbox"/>
+    <div class="quiz">
+      <h3>是否有想要加入的軟體公司？為什麼想加入該公司？</h3>
+      <p>因為工作的關係認識到「Appier」這間以AI服務為核心的軟體公司，了解這間公司理念及服務項目－數位廣告及跨螢行銷、數據及受眾分析等，除了有優秀的技術外，感受到公司是凝聚力很強的團隊。而看了很多網路心得後，Appier對於求職者也是非常用心，這也是我所期望的良好的工作環境！</p>
+    </div>
+  </label>
+  <label>
+    <input id="switch" type="checkbox"/>
+    <div class="quiz">
+      <h3>請描述一件你曾經碰到最困難的事情，如何克服？</h3>
+      <p>曾經有在日本打工度假一年，找工作不盡理想，經歷了一段低潮期。後來嘗試了很多機會與管道，順利找到新工作，在這之前一直對自己的日文程度沒有自信，很多職缺都先入為主認為自己無法勝任。所以很重要的是要先克服自己的心態，那種不自信跟不敢跨出去的膽小心態，會讓自己在很多事情還沒開始做前就澆熄了熱情。<br><br>就像現在步入中年的我，在這個時機點轉職多少帶點忐忑，但看到也有比我年紀大的同學成功找到工作，就覺得不應該先把自己看扁，心態要調整到軌道上，才會離目標越來越近！</p>
+    </div>
+  </label>
+  <label>
+    <input id="switch" type="checkbox"/>
+    <div class="quiz">
+      <h3>關於這份申請網頁，請分享一個你開發時的技術心得。</h3>
+      <p>在哲宇老師的課程中，有學習到Pug及Sass的寫法，所以網頁的寫法是透過這兩個語言完成的。<br><br>整體的架構是在課程練習時所學到的技巧，其中一個是CSS中checkbox的「checked」狀態，用來是否選取的狀態做物件的變化。所以我將每道問題的回答都先隱藏起來，並用「cursor: pointer」讓滑鼠變為手指，提示瀏覽者能將其題目點擊，並延展出回答內容，以及做了顏色上的變化。</p>
+    </div>
+  </label>
+  <label>
+    <input id="switch" type="checkbox"/>
+    <div class="quiz">
+      <h3>其他想要對我們說的事情？</h3>
+      <p>謝謝彭彭這麼用心的設計這樣的課程，看到這麼多同學都轉職成功，倍感欽佩。希望我能帶著堅持跟自律一起加入這個計畫，與大家一同成長並實現目標！</p>
+    </div>
+  </label>
+</div>
 </body>
 </html>
